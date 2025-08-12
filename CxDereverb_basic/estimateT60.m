@@ -1,11 +1,13 @@
-function reverbTime = estimateT60(ir, fs)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % estimateT60 estimates the reverberation time (T60) of an impulse response.
+% The code is modified from Christopher Brown (2025). t60.m MATLAB Central File Exchange.
 % Inputs:
 %   ir - Impulse response vector
 %   fs - Sampling rate in Hz
 % Outputs:
 %   reverbTime - Estimated T60 time in milliseconds
-%   decayCurve - Integrated decay curve
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function reverbTime = estimateT60(ir, fs)
 
 % Ensure row vector
 if size(ir, 2) == 1
@@ -75,4 +77,5 @@ else
 end
 
 end
+
 
