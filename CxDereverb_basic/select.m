@@ -1,4 +1,4 @@
-
+% Select audio file from computer
  [file,path] = uigetfile('*.wav');
 if isequal(file,0)
    filename='NaN.wav';
@@ -8,5 +8,6 @@ else
 end
 
 close all
+
 
 main
