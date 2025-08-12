@@ -1,3 +1,5 @@
+% Main page for users to determine all necessary paramters.
+% Users should initially excute welcomePage.m
 close all
 h0 = figure('position',[100 200 300 500]','Name','Cx Dereverb');
 uicontrol('parent',h0,'style','text','fontsize',12,'string',filename,'position',[55 380 200 30]);
@@ -34,4 +36,5 @@ ht3 = uicontrol('style','edit','Position',[125,90,60,30]);
 beta_txt = @(~,e)set(ht3,'String',num2str(get(e.AffectedObject,'Value')),'fontsize',12);
 addlistener(betaX, 'Value', 'PostSet',beta_txt);
 %axes('Position',[.35 .3 .3 .3]);              
+
 %imshow('NTUA.png')
