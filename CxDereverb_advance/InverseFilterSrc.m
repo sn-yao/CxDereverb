@@ -1,3 +1,6 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the main script.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 load('small.mat');
 fs=44100;
 freq_low=80;
@@ -79,4 +82,5 @@ disp(drr_value_before);
 
 [SD_before, SDX_before] = calSD(raw_IRs, fs);
 disp("SD(before)=")
+
 disp(SDX_before);
