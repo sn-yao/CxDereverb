@@ -1,3 +1,6 @@
+% The funciton is modified from part of Matlab built-in funciton https://de.mathworks.com/help/audio/ref/impzest.html
+% Farina, Angelo. "Advancements in Impulse Response Measurements by Sine Sweeps." Presented at the Audio Engineering Society 122nd Convention, Vienna, Austria, 2007.
+
 function ir = estimateIR_SweptSine(excitation, rec, endSilenceLen)
 %% Estimate impulse response for Swept Sine excitation
 % Find minimum FFT length, and increase it if it has any large prime
@@ -64,4 +67,5 @@ else % codegen:
         end
         mx = mx/N;
     end
+
 end
