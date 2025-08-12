@@ -1,3 +1,5 @@
+% Produce room model and inverse filter
+% Users should initially excute welcomePage.m
 if get(fsX,'value')==0
     fs=44100;
 else
@@ -68,4 +70,5 @@ timeIdx1=(1:length(corrected_output))/fs;
 corrected_outputN=corrected_output/max(abs(corrected_output));  
 plot(timeIdx1(1:length(normalized_IRs)),corrected_outputN(1:length(normalized_IRs)));
 xlim([-0.1 0.6])
+
 
