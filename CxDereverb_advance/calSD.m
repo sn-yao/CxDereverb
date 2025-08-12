@@ -9,7 +9,7 @@
 % <EXAMPLE>
 % x = load('small.mat');
 % fs = 44100;
-% plot(linspace(0,50,1e4), MUSIC);
+% [sd,sdx]=calSD(x,fs);
 % disp(sdx);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function [sd,sdx] = calSD(x,fs)
@@ -21,5 +21,6 @@ fx = fft(x,fs);
 freq = (0 : fs/2);
 sd = std(20*log10(abs(fx(1:(fs/2 + 1)))));
 sdx=std(20*log10(abs(fx(100:16000))));
+
 
 
