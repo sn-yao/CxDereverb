@@ -1,4 +1,16 @@
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright © 2025 MediaLab. All rights reserved.
+% This code is provided for academic and research purposes only.
+% Redistribution and use in source and binary forms, with or without modification, 
+% are permitted for non-commercial, scholarly activities, 
+% provided that the original author(s) are credited and this copyright notice is included in all copies
+% or substantial portions of the code.
+% The code is provided "as is", without warranty of any kind, express or implied, 
+% including but not limited to the warranties of merchantability, fitness for a particular purpose, 
+% and non-infringement. In no event shall the authors or copyright holders be liable for any claim, 
+% damages, or other liability arising from, out of, or in connection with the code or its use.
+% Part of the code was adapted from Vera Erbes’s CALCULATE HPTF COMPENSATION FILTERS. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 raw_IRs = ir;
 shelf_freq = 6000;
 
@@ -55,3 +67,4 @@ corrected_output = conv(raw_IRs, inv_filter_time);
 
 save('ir.mat', 'raw_IRs');
 save('inv.mat','inv_filter_time');
+
